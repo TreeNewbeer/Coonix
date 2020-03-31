@@ -3,7 +3,7 @@
 _Coonix_ is a funny project about building a application platform in Allwinner-v3s processor.
 
 ### The structure of _Coonix_ is shown as follow:
-![](Doc/pic/structdiagram.png)
+![](doc/pic/structdiagram.png)
 
 ## How to use
 * TODO
