@@ -1,6 +1,6 @@
 # Coonix
 
-_Coonix_ is a funny project about building a application platform in Allwinner-v3s processor.
+_Coonix_ is a funny project about building a application platform in Allwinner-v3s processor or nuvoton nuc980 processor.
 
 ### The structure of _Coonix_ is shown as follow:
 ![](doc/pic/structdiagram.png)
