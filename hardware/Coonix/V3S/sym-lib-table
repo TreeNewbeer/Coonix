@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name Allwinner)(type Legacy)(uri ${KIPRJMOD}/Allwinner.lib)(options "")(descr ""))
+  (lib (name EVER_ANALOG)(type Legacy)(uri ${KIPRJMOD}/EVER_ANALOG.lib)(options "")(descr ""))
+  (lib (name Coonix-rescue)(type Legacy)(uri ${KIPRJMOD}/Coonix-rescue.lib)(options "")(descr ""))
+)
