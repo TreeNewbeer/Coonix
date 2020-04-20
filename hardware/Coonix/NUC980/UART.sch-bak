@@ -1,0 +1,193 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 10 12
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Interface_UART:MAX485E U1001
+U 1 1 5EC2FC43
+P 5700 3000
+F 0 "U1001" H 5450 3450 50  0000 C CNN
+F 1 "MAX485E" H 5950 3450 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 5700 2300 50  0001 C CNN
+F 3 "https://datasheets.maximintegrated.com/en/ds/MAX1487E-MAX491E.pdf" H 5700 3050 50  0001 C CNN
+	1    5700 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 2900 3950 2900
+Wire Wire Line
+	5300 3000 5250 3000
+Wire Wire Line
+	5250 3000 5250 3050
+Wire Wire Line
+	5250 3100 5300 3100
+Wire Wire Line
+	5250 3050 3950 3050
+Connection ~ 5250 3050
+Wire Wire Line
+	5250 3050 5250 3100
+Wire Wire Line
+	5300 3200 3950 3200
+$Comp
+L power:+3V3 #PWR0176
+U 1 1 5EC3125F
+P 5700 1950
+F 0 "#PWR0176" H 5700 1800 50  0001 C CNN
+F 1 "+3V3" H 5715 2123 50  0000 C CNN
+F 2 "" H 5700 1950 50  0001 C CNN
+F 3 "" H 5700 1950 50  0001 C CNN
+	1    5700 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 1950 5700 2150
+$Comp
+L Device:C C1001
+U 1 1 5EC31574
+P 6050 2150
+F 0 "C1001" V 5798 2150 50  0000 C CNN
+F 1 "0.1uF" V 5889 2150 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6088 2000 50  0001 C CNN
+F 3 "~" H 6050 2150 50  0001 C CNN
+	1    6050 2150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5900 2150 5700 2150
+Connection ~ 5700 2150
+Wire Wire Line
+	5700 2150 5700 2500
+$Comp
+L power:GNDD #PWR0177
+U 1 1 5EC31A15
+P 6300 2400
+F 0 "#PWR0177" H 6300 2150 50  0001 C CNN
+F 1 "GNDD" H 6304 2245 50  0000 C CNN
+F 2 "" H 6300 2400 50  0001 C CNN
+F 3 "" H 6300 2400 50  0001 C CNN
+	1    6300 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 2400 6300 2150
+Wire Wire Line
+	6300 2150 6200 2150
+Wire Wire Line
+	6100 3200 7300 3200
+$Comp
+L Connector_Generic:Conn_01x05 J1001
+U 1 1 5EC33263
+P 6200 4650
+F 0 "J1001" H 6280 4692 50  0000 L CNN
+F 1 "Conn_01x05" H 6280 4601 50  0000 L CNN
+F 2 "Connector_Phoenix_MC:PhoenixContact_MC_1,5_5-G-3.81_1x05_P3.81mm_Horizontal" H 6200 4650 50  0001 C CNN
+F 3 "~" H 6200 4650 50  0001 C CNN
+	1    6200 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 2900 6250 2900
+Wire Wire Line
+	5700 3800 5700 3600
+$Comp
+L Device:R R1001
+U 1 1 5EC371E1
+P 6550 3050
+F 0 "R1001" V 6500 2800 50  0000 C CNN
+F 1 "120R" V 6500 3250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6480 3050 50  0001 C CNN
+F 3 "~" H 6550 3050 50  0001 C CNN
+	1    6550 3050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7300 3050 7300 3200
+Connection ~ 7300 3200
+Wire Wire Line
+	6400 3050 6250 3050
+Wire Wire Line
+	6250 3050 6250 2900
+Connection ~ 6250 2900
+Text HLabel 3950 3200 0    50   Input ~ 0
+RS485_DI
+Text HLabel 3950 3050 0    50   Input ~ 0
+RS485_DE
+Text HLabel 3950 2900 0    50   Output ~ 0
+RS485_RO
+Text Label 7650 3200 2    50   ~ 0
+RS485_A
+Wire Wire Line
+	7300 3200 7650 3200
+Wire Wire Line
+	6250 2900 7650 2900
+Text Label 7650 2900 2    50   ~ 0
+RS485_B
+Wire Wire Line
+	6000 4450 5450 4450
+Wire Wire Line
+	6000 4550 5450 4550
+Wire Wire Line
+	6000 4650 5450 4650
+Wire Wire Line
+	6000 4750 5450 4750
+Wire Wire Line
+	6000 4850 5800 4850
+Wire Wire Line
+	5800 4850 5800 5100
+$Comp
+L power:GNDD #PWR0178
+U 1 1 5EC3CB4E
+P 5800 5100
+F 0 "#PWR0178" H 5800 4850 50  0001 C CNN
+F 1 "GNDD" H 5804 4945 50  0000 C CNN
+F 2 "" H 5800 5100 50  0001 C CNN
+F 3 "" H 5800 5100 50  0001 C CNN
+	1    5800 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDD #PWR0179
+U 1 1 5EC3D9A8
+P 5700 3800
+F 0 "#PWR0179" H 5700 3550 50  0001 C CNN
+F 1 "GNDD" H 5704 3645 50  0000 C CNN
+F 2 "" H 5700 3800 50  0001 C CNN
+F 3 "" H 5700 3800 50  0001 C CNN
+	1    5700 3800
+	1    0    0    -1  
+$EndComp
+Text Label 5450 4550 0    50   ~ 0
+RS485_B
+Text Label 5450 4450 0    50   ~ 0
+RS485_A
+Text HLabel 5450 4650 0    50   Output ~ 0
+UART_TX
+Text HLabel 5450 4750 0    50   Input ~ 0
+UART_RX
+$Comp
+L Device:Jumper_NO_Small JP1001
+U 1 1 5EC48592
+P 7000 3050
+F 0 "JP1001" H 6950 3150 50  0000 C CNN
+F 1 "JP" H 7100 3150 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm" H 7000 3050 50  0001 C CNN
+F 3 "~" H 7000 3050 50  0001 C CNN
+	1    7000 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 3050 6700 3050
+Wire Wire Line
+	7100 3050 7300 3050
+$EndSCHEMATC
