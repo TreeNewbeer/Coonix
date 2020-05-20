@@ -1,0 +1,7 @@
+(sym_lib_table
+  (lib (name NUC9xx)(type Legacy)(uri ${KIPRJMOD}/library/NUC9xx.lib)(options "")(descr ""))
+  (lib (name IP10x)(type Legacy)(uri ${KIPRJMOD}/library/IP10x.lib)(options "")(descr ""))
+  (lib (name EA3036)(type Legacy)(uri ${KIPRJMOD}/library/EA3036.lib)(options "")(descr ""))
+  (lib (name AP6xxx)(type Legacy)(uri ${KIPRJMOD}/library/AP6xxx.lib)(options "")(descr ""))
+  (lib (name SD_Card)(type Legacy)(uri ${KIPRJMOD}/library/SD_Card.lib)(options "")(descr ""))
+)
