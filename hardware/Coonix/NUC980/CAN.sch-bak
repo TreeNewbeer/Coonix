@@ -1,0 +1,145 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 11 12
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Interface_CAN_LIN:SN65HVD232 U1101
+U 1 1 5EC44BCC
+P 5800 3800
+F 0 "U1101" H 5550 4100 50  0000 C CNN
+F 1 "SN65HVD232" H 6100 4100 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 5800 3300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn65hvd230.pdf" H 5700 4200 50  0001 C CNN
+	1    5800 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 3500 5800 3250
+$Comp
+L power:+3V3 #PWR0180
+U 1 1 5EC4A133
+P 5800 3100
+F 0 "#PWR0180" H 5800 2950 50  0001 C CNN
+F 1 "+3V3" H 5815 3273 50  0000 C CNN
+F 2 "" H 5800 3100 50  0001 C CNN
+F 3 "" H 5800 3100 50  0001 C CNN
+	1    5800 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1101
+U 1 1 5EC4A235
+P 6200 3250
+F 0 "C1101" V 5948 3250 50  0000 C CNN
+F 1 "0.1uF" V 6039 3250 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6238 3100 50  0001 C CNN
+F 3 "~" H 6200 3250 50  0001 C CNN
+	1    6200 3250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6050 3250 5800 3250
+Connection ~ 5800 3250
+Wire Wire Line
+	5800 3250 5800 3100
+$Comp
+L power:GNDD #PWR0181
+U 1 1 5EC4A695
+P 6500 3350
+F 0 "#PWR0181" H 6500 3100 50  0001 C CNN
+F 1 "GNDD" H 6504 3195 50  0000 C CNN
+F 2 "" H 6500 3350 50  0001 C CNN
+F 3 "" H 6500 3350 50  0001 C CNN
+	1    6500 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 3350 6500 3250
+Wire Wire Line
+	6500 3250 6350 3250
+$Comp
+L power:GNDD #PWR0182
+U 1 1 5EC4C922
+P 5800 4400
+F 0 "#PWR0182" H 5800 4150 50  0001 C CNN
+F 1 "GNDD" H 5804 4245 50  0000 C CNN
+F 2 "" H 5800 4400 50  0001 C CNN
+F 3 "" H 5800 4400 50  0001 C CNN
+	1    5800 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 4400 5800 4200
+Wire Wire Line
+	6200 3800 7750 3800
+$Comp
+L Connector_Generic:Conn_01x02 J1101
+U 1 1 5EC4DEEF
+P 8050 3800
+F 0 "J1101" H 8130 3792 50  0000 L CNN
+F 1 "Conn_01x02" H 8130 3701 50  0000 L CNN
+F 2 "Connector_Phoenix_MC:PhoenixContact_MC_1,5_2-G-3.81_1x02_P3.81mm_Horizontal" H 8050 3800 50  0001 C CNN
+F 3 "~" H 8050 3800 50  0001 C CNN
+	1    8050 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 3900 6700 3900
+$Comp
+L Device:R R1101
+U 1 1 5EC4E863
+P 7050 3700
+F 0 "R1101" V 6843 3700 50  0000 C CNN
+F 1 "120R" V 6934 3700 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6980 3700 50  0001 C CNN
+F 3 "~" H 7050 3700 50  0001 C CNN
+	1    7050 3700
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Jumper_NO_Small JP1101
+U 1 1 5EC4ECAB
+P 7500 3700
+F 0 "JP1101" H 7500 3885 50  0000 C CNN
+F 1 "JP" H 7500 3794 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm" H 7500 3700 50  0001 C CNN
+F 3 "~" H 7500 3700 50  0001 C CNN
+	1    7500 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7200 3700 7400 3700
+Wire Wire Line
+	7600 3700 7750 3700
+Wire Wire Line
+	7750 3700 7750 3800
+Connection ~ 7750 3800
+Wire Wire Line
+	7750 3800 7850 3800
+Wire Wire Line
+	6900 3700 6700 3700
+Wire Wire Line
+	6700 3700 6700 3900
+Connection ~ 6700 3900
+Wire Wire Line
+	6700 3900 7850 3900
+Wire Wire Line
+	5400 3700 4500 3700
+Wire Wire Line
+	5400 3800 4500 3800
+Text HLabel 4500 3700 0    50   Input ~ 0
+CAN_TXD
+Text HLabel 4500 3800 0    50   Output ~ 0
+CAN_RXD
+$EndSCHEMATC

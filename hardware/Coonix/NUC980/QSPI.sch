@@ -1,0 +1,206 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 12
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Memory_Flash:W25Q128JVS U401
+U 1 1 5F047C58
+P 5500 3500
+F 0 "U401" H 5150 3850 50  0000 C CNN
+F 1 "W25N01GV" H 5800 3850 50  0000 C CNN
+F 2 "MicroSD:Mi" H 5500 3500 50  0001 C CNN
+F 3 "http://www.winbond.com/resource-files/w25q128jv_dtr%20revc%2003272018%20plus.pdf" H 5500 3500 50  0001 C CNN
+	1    5500 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C401
+U 1 1 5F049CFD
+P 5650 2850
+F 0 "C401" H 5650 2750 50  0000 R CNN
+F 1 "10uF" H 5650 3000 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 5688 2700 50  0001 C CNN
+F 3 "~" H 5650 2850 50  0001 C CNN
+	1    5650 2850
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C402
+U 1 1 5F04A293
+P 5950 2850
+F 0 "C402" H 5950 2750 50  0000 R CNN
+F 1 "0.1uF" H 5900 3000 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5988 2700 50  0001 C CNN
+F 3 "~" H 5950 2850 50  0001 C CNN
+	1    5950 2850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5950 2650 5950 2700
+Wire Wire Line
+	5650 2700 5650 2650
+Connection ~ 5650 2650
+Wire Wire Line
+	5650 2650 5950 2650
+Wire Wire Line
+	5650 3000 5650 3050
+Wire Wire Line
+	5650 3050 5950 3050
+Wire Wire Line
+	5950 3050 5950 3000
+Wire Wire Line
+	5950 3050 6250 3050
+Connection ~ 5950 3050
+Wire Wire Line
+	6000 3300 7200 3300
+Wire Wire Line
+	6000 3400 7200 3400
+Wire Wire Line
+	6000 3600 6750 3600
+Wire Wire Line
+	6000 3700 6850 3700
+Wire Wire Line
+	6000 3850 6950 3850
+Wire Wire Line
+	5500 4050 5500 3900
+Text Label 4750 3400 0    50   ~ 0
+CS
+Wire Wire Line
+	4750 3400 5000 3400
+Wire Wire Line
+	5000 3600 4750 3600
+Text Label 4750 3600 0    50   ~ 0
+CLK
+Text Label 6000 3950 0    50   ~ 0
+CLK
+Text Label 6000 3850 0    50   ~ 0
+CS
+Text HLabel 7200 3300 2    50   BiDi ~ 0
+QSPI_IO0
+Text HLabel 7200 3400 2    50   BiDi ~ 0
+QSPI_IO1
+Text HLabel 7200 3600 2    50   BiDi ~ 0
+QSPI_IO2
+Text HLabel 7200 3700 2    50   BiDi ~ 0
+QSPI_IO3
+Text HLabel 7200 3850 2    50   Input ~ 0
+QSPI_CS
+Text HLabel 7200 3950 2    50   Input ~ 0
+QSPI_CLK
+$Comp
+L Device:R R401
+U 1 1 5F04FCB8
+P 6650 3950
+F 0 "R401" V 6600 3700 50  0000 C CNN
+F 1 "0R" V 6600 4100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6580 3950 50  0001 C CNN
+F 3 "~" H 6650 3950 50  0001 C CNN
+	1    6650 3950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6500 3950 6000 3950
+Wire Wire Line
+	6800 3950 7200 3950
+Wire Wire Line
+	6750 3000 6750 3600
+Connection ~ 6750 3600
+Wire Wire Line
+	6750 3600 7200 3600
+Wire Wire Line
+	6850 3000 6850 3700
+Connection ~ 6850 3700
+Wire Wire Line
+	6850 3700 7200 3700
+Wire Wire Line
+	6950 3000 6950 3850
+Connection ~ 6950 3850
+Wire Wire Line
+	6950 3850 7200 3850
+Wire Wire Line
+	6750 2600 6750 2500
+Wire Wire Line
+	6750 2500 6850 2500
+Wire Wire Line
+	6950 2500 6950 2600
+Wire Wire Line
+	6850 2600 6850 2500
+Connection ~ 6850 2500
+Wire Wire Line
+	6850 2500 6950 2500
+Wire Wire Line
+	6850 2500 6850 2300
+$Comp
+L power:+3V3 #PWR0130
+U 1 1 5F0B3200
+P 6850 2300
+F 0 "#PWR0130" H 6850 2150 50  0001 C CNN
+F 1 "+3V3" H 6865 2473 50  0000 C CNN
+F 2 "" H 6850 2300 50  0001 C CNN
+F 3 "" H 6850 2300 50  0001 C CNN
+	1    6850 2300
+	1    0    0    -1  
+$EndComp
+Connection ~ 5500 2650
+Wire Wire Line
+	5500 2650 5650 2650
+Wire Wire Line
+	5500 2650 5500 3100
+$Comp
+L power:+3V3 #PWR0131
+U 1 1 5F04903C
+P 5500 2650
+F 0 "#PWR0131" H 5500 2500 50  0001 C CNN
+F 1 "+3V3" H 5515 2823 50  0000 C CNN
+F 2 "" H 5500 2650 50  0001 C CNN
+F 3 "" H 5500 2650 50  0001 C CNN
+	1    5500 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Pack04 RN401
+U 1 1 5EAC4F52
+P 6950 2800
+F 0 "RN401" H 7138 2846 50  0000 L CNN
+F 1 "10Kx4" H 7138 2755 50  0000 L CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0603" V 7225 2800 50  0001 C CNN
+F 3 "~" H 6950 2800 50  0001 C CNN
+	1    6950 2800
+	1    0    0    -1  
+$EndComp
+NoConn ~ 7050 2600
+NoConn ~ 7050 3000
+$Comp
+L power:GNDD #PWR0128
+U 1 1 5E9B4D7E
+P 5500 4050
+F 0 "#PWR0128" H 5500 3800 50  0001 C CNN
+F 1 "GNDD" H 5504 3895 50  0000 C CNN
+F 2 "" H 5500 4050 50  0001 C CNN
+F 3 "" H 5500 4050 50  0001 C CNN
+	1    5500 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDD #PWR0129
+U 1 1 5E9B50AB
+P 6250 3050
+F 0 "#PWR0129" H 6250 2800 50  0001 C CNN
+F 1 "GNDD" V 6254 2940 50  0000 R CNN
+F 2 "" H 6250 3050 50  0001 C CNN
+F 3 "" H 6250 3050 50  0001 C CNN
+	1    6250 3050
+	0    -1   -1   0   
+$EndComp
+$EndSCHEMATC

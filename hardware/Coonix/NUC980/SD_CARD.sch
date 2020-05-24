@@ -1,0 +1,278 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 5 12
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	6100 3150 3850 3150
+Wire Wire Line
+	6100 3250 3950 3250
+Wire Wire Line
+	6100 3350 4050 3350
+Wire Wire Line
+	6100 3750 4450 3750
+Wire Wire Line
+	6100 3850 4550 3850
+Text HLabel 3050 3150 0    50   BiDi ~ 0
+SD0_D2
+Text HLabel 3050 3250 0    50   BiDi ~ 0
+SD0_D3
+Text HLabel 3050 3350 0    50   Input ~ 0
+SD0_CMD
+Text HLabel 3050 3550 0    50   Input ~ 0
+SD0_CLK
+$Comp
+L Device:R R501
+U 1 1 5F0BE105
+P 3550 3550
+F 0 "R501" V 3500 3250 50  0000 C CNN
+F 1 "0R" V 3500 3700 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3480 3550 50  0001 C CNN
+F 3 "~" H 3550 3550 50  0001 C CNN
+	1    3550 3550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3400 3550 3050 3550
+Text HLabel 3050 3750 0    50   BiDi ~ 0
+SD0_D0
+Text HLabel 3050 3850 0    50   BiDi ~ 0
+SD0_D1
+Wire Wire Line
+	5950 4400 5950 4250
+Wire Wire Line
+	5950 3650 6100 3650
+$Comp
+L Device:Ferrite_Bead_Small FB501
+U 1 1 5F0BFE10
+P 6450 4250
+F 0 "FB501" V 6400 4150 50  0000 C CNN
+F 1 "120R" V 6400 4450 50  0000 C CNN
+F 2 "Inductor_SMD:L_0805_2012Metric" V 6380 4250 50  0001 C CNN
+F 3 "~" H 6450 4250 50  0001 C CNN
+	1    6450 4250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6350 4250 5950 4250
+Connection ~ 5950 4250
+Wire Wire Line
+	5950 4250 5950 3650
+Wire Wire Line
+	6550 4250 7900 4250
+Wire Wire Line
+	7900 4250 7900 4050
+Wire Wire Line
+	7900 4050 7800 4050
+Wire Wire Line
+	6100 3450 5950 3450
+Wire Wire Line
+	5950 3450 5950 2350
+$Comp
+L power:+3V3 #PWR0132
+U 1 1 5F0C18B9
+P 5950 2300
+F 0 "#PWR0132" H 5950 2150 50  0001 C CNN
+F 1 "+3V3" H 5965 2473 50  0000 C CNN
+F 2 "" H 5950 2300 50  0001 C CNN
+F 3 "" H 5950 2300 50  0001 C CNN
+	1    5950 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C501
+U 1 1 5F0C19E8
+P 5200 2650
+F 0 "C501" H 5315 2696 50  0000 L CNN
+F 1 "0.1uF" H 5315 2605 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5238 2500 50  0001 C CNN
+F 3 "~" H 5200 2650 50  0001 C CNN
+	1    5200 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C502
+U 1 1 5F0C1D2B
+P 5650 2650
+F 0 "C502" H 5765 2696 50  0000 L CNN
+F 1 "10uF" H 5765 2605 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 5688 2500 50  0001 C CNN
+F 3 "~" H 5650 2650 50  0001 C CNN
+	1    5650 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDD #PWR0133
+U 1 1 5F0C22CB
+P 5950 4400
+F 0 "#PWR0133" H 5950 4150 50  0001 C CNN
+F 1 "GNDD" H 5954 4245 50  0000 C CNN
+F 2 "" H 5950 4400 50  0001 C CNN
+F 3 "" H 5950 4400 50  0001 C CNN
+	1    5950 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDD #PWR0134
+U 1 1 5F0C25CD
+P 5400 2950
+F 0 "#PWR0134" H 5400 2700 50  0001 C CNN
+F 1 "GNDD" H 5404 2795 50  0000 C CNN
+F 2 "" H 5400 2950 50  0001 C CNN
+F 3 "" H 5400 2950 50  0001 C CNN
+	1    5400 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 2950 5400 2850
+Wire Wire Line
+	5400 2850 5200 2850
+Wire Wire Line
+	5200 2850 5200 2800
+Wire Wire Line
+	5400 2850 5650 2850
+Wire Wire Line
+	5650 2850 5650 2800
+Connection ~ 5400 2850
+Wire Wire Line
+	5200 2500 5200 2450
+Wire Wire Line
+	5200 2450 5450 2450
+Wire Wire Line
+	5650 2450 5650 2500
+Wire Wire Line
+	5450 2450 5450 2350
+Wire Wire Line
+	5450 2350 5950 2350
+Connection ~ 5450 2450
+Wire Wire Line
+	5450 2450 5650 2450
+Connection ~ 5950 2350
+Wire Wire Line
+	5950 2350 5950 2300
+Wire Wire Line
+	3850 2800 3850 3150
+Connection ~ 3850 3150
+Wire Wire Line
+	3850 3150 3050 3150
+Wire Wire Line
+	3950 2800 3950 3250
+Connection ~ 3950 3250
+Wire Wire Line
+	3950 3250 3050 3250
+Wire Wire Line
+	4050 2800 4050 3350
+Connection ~ 4050 3350
+Wire Wire Line
+	4050 3350 3050 3350
+Wire Wire Line
+	4450 2800 4450 3750
+Connection ~ 4450 3750
+Wire Wire Line
+	4450 3750 3050 3750
+Wire Wire Line
+	4550 2800 4550 3850
+Connection ~ 4550 3850
+Wire Wire Line
+	4550 3850 3050 3850
+Wire Wire Line
+	3850 2400 3850 2300
+Wire Wire Line
+	3850 2300 3950 2300
+Wire Wire Line
+	4650 2300 4650 2400
+Wire Wire Line
+	3950 2400 3950 2300
+Connection ~ 3950 2300
+Wire Wire Line
+	3950 2300 4050 2300
+Wire Wire Line
+	4050 2400 4050 2300
+Connection ~ 4050 2300
+Wire Wire Line
+	4450 2400 4450 2300
+Connection ~ 4450 2300
+Wire Wire Line
+	4450 2300 4550 2300
+Wire Wire Line
+	4550 2400 4550 2300
+Connection ~ 4550 2300
+Wire Wire Line
+	4550 2300 4650 2300
+Wire Wire Line
+	4250 2300 4250 2100
+Connection ~ 4250 2300
+$Comp
+L power:+3V3 #PWR0135
+U 1 1 5F0D170F
+P 4250 2100
+F 0 "#PWR0135" H 4250 1950 50  0001 C CNN
+F 1 "+3V3" H 4265 2273 50  0000 C CNN
+F 2 "" H 4250 2100 50  0001 C CNN
+F 3 "" H 4250 2100 50  0001 C CNN
+	1    4250 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L SD_Card:Micro_SD_Card J501
+U 1 1 5F0E0CB8
+P 7000 3450
+F 0 "J501" H 6950 4167 50  0000 C CNN
+F 1 "Micro_SD_Card" H 6950 4076 50  0000 C CNN
+F 2 "MicroSD:MicroSD" H 8150 3750 50  0001 C CNN
+F 3 "http://katalog.we-online.de/em/datasheet/693072010801.pdf" H 7000 3450 50  0001 C CNN
+	1    7000 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 3950 4650 3950
+Text HLabel 3050 3950 0    50   Output ~ 0
+SD0_CD
+Wire Wire Line
+	3700 3550 6100 3550
+Wire Wire Line
+	4650 2800 4650 3950
+Connection ~ 4650 3950
+Wire Wire Line
+	4650 3950 3050 3950
+Wire Wire Line
+	4250 2300 4450 2300
+Wire Wire Line
+	4050 2300 4250 2300
+$Comp
+L Device:R_Pack04 RN501
+U 1 1 5EAC8B7A
+P 3950 2600
+F 0 "RN501" H 3450 2700 50  0000 L CNN
+F 1 "10Kx4" H 3450 2550 50  0000 L CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0603" V 4225 2600 50  0001 C CNN
+F 3 "~" H 3950 2600 50  0001 C CNN
+	1    3950 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Pack04 RN502
+U 1 1 5EAC99EF
+P 4650 2600
+F 0 "RN502" H 4150 2700 50  0000 L CNN
+F 1 "10Kx4" H 4150 2550 50  0000 L CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0603" V 4925 2600 50  0001 C CNN
+F 3 "~" H 4650 2600 50  0001 C CNN
+	1    4650 2600
+	1    0    0    -1  
+$EndComp
+NoConn ~ 3750 2400
+NoConn ~ 3750 2800
+NoConn ~ 4750 2400
+NoConn ~ 4750 2800
+$EndSCHEMATC
